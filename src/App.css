@@ -1,9 +1,9 @@
 .App {
-  text-align: center;
+  background-color: #000000;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 9vmin;
   pointer-events: none;
 }
 
@@ -14,14 +14,64 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #000000;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border-bottom: 1px solid rgb(30, 10, 82);
+}
+
+.Half-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.Home-link, .Event-link, .Login-link {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  padding: 5px;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 20px;  /* Added transition for smooth movement */
+}
+
+.Home-link::after, .Event-link::after, .Login-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color:#082d37;
+  transition: width 0.3s ease-in-out;
+}
+
+.Home-link:hover::after, .Event-link:hover::after, .Login-link:hover::after {
+  width: 100%;
+}
+
+.Home-link:hover, .Event-link:hover, .Login-link:hover {
+  transform: translateY(-5px);  /* Moves the link up on hover */
+}
+.badge{
+  margin-left: 20px;
+  cursor: pointer;
+}
+.Search {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.App-body{
+  min-height: 90vh;
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  display: block;
+  align-items: center;
 }
 
 .App-link {
@@ -35,4 +85,204 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Search{
+  height: 40px;
+   width: 400px;
+   background-color: #000000;
+   border-bottom-color: #082d37;
+   border-top: none;
+   border-left: none;
+   border-right:none;
+   margin-left:200px;
+   color: white;
+}
+
+.Home-button{
+  width: 150px;
+  height: 40px;
+  color: white;
+  background-color: hsl(233, 68%, 18%);
+  margin-left: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  vertical-align: top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right:15px;
+  margin-top: 10px;
+  transition: background-color 0.25s,
+  color 0.25s;
+}
+.Home-button:hover{
+  background-color:white;
+  color:hsl(233, 68%, 18%);
+}
+.Home-button:active{
+  opacity: 0.5;
+}
+.Event-button{
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  color:rgba(4, 4, 183, 0.685);
+  border-color:hsl(233, 68%, 18%);
+  border-style: solid;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right:15px;
+  cursor: pointer;
+  border:none;
+  border-radius:2px;
+  margin-left: 20px;
+  margin-top:10px;
+  transition:background-color 0.25s,
+             color 0.25s;
+        
+}
+.Event-button:hover{
+  background-color:hsl(233, 68%, 18%);
+    color:white;
+    padding-left: 20px;
+    padding-right:20px;
+}
+.Event-button:active{
+opacity: 0.8;
+}
+.Login-button{
+  width: 150px;
+  height: 40px;
+  color: white;
+  background-color: hsl(233, 68%, 18%);
+  margin-left: 20px;
+  margin-right:20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  vertical-align: top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right:15px;
+  margin-top: 10px;
+  transition: background-color 0.25s,
+  color 0.25s;
+
+}
+.Login-button:hover{
+  background-color:white;
+  color:hsl(233, 68%, 18%);
+}
+.Login-button:active{
+  opacity: 0.5;
+}
+.Half-header{
+  vertical-align: top;
+}
+.App-body-header{
+  vertical-align: top;
+}
+.App-body-banner{
+  width: 1500px;
+  height: 700px;
+  object-fit: contain;
+  margin-bottom: 40px;
+}
+
+.App-body-about-header{
+  color: rgb(233, 22, 236);
+  font-size: 30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 600px;
+}
+.App-body-about-descrption{
+  width: 1000px;
+  margin:16px;
+  padding:16px;
+  color: white;
+}
+.App-body-card{
+  display: flex;
+  display: flex;
+  background-color: #000000;
+  border: 1px solid #444;
+  border-radius: 10px; 
+  width: 1400px;
+  padding: 20px; 
+  margin: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  color: white; /* Text color */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.App-body-card-images{
+  margin-right:50px;
+}
+.App-body-card-image{
+  width: 300px;
+  margin-left: 50px;
+}
+.App-body-card-body{
+  display: block;
+}
+.App-body-card-header{
+  color: rgb(233, 22, 236);
+  font-size: 30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.App-body-card:hover {
+  background-color: #1a1a1a; /* Slightly lighter black on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+  transform: translateY(-5px); /* Move the card up */
+  cursor: pointer;
+}
+.App-body-button{
+  width: 150px;
+  height: 40px;
+  background-color: #082d37;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  border:none;
+  cursor:pointer;
+  transition: opacity 0.3;
+}
+
+.App-body-button:hover{
+  opacity: 0.8;
+}
+.about-us {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+}
+.about-header-title{
+  color: rgb(233, 22, 236);
+  font-size: 30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  background-color: #000000;
+  border: 1px solid #444;
+  border-radius: 10px; 
+  width: 1400px;
+  padding: 20px; 
+  margin: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  color: white; /* Text color */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.card h3 {
+  margin-top: 0; /* Remove top margin for headings */
 }

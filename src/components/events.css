@@ -1,0 +1,71 @@
+.Events{
+    margin:10px;
+    padding:10px;
+}
+.Events-header p{
+    margin-bottom:40px;
+    color: white;
+    font-style: oblique;
+    margin-left: 50px;
+}
+.Events-title p{
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+  display:block;
+  margin-left: 50px;
+  font-weight: bold;
+  color: aliceblue;
+  margin-bottom: 0%;
+  
+}
+.Events-body{
+    margin-left: 50px;
+    display: flex;
+    margin-bottom: 40px;
+    color:white;
+    max-width: 1400px;
+    flex-wrap: wrap;
+}
+.Events-card{
+  display: block;
+  width: 300px;
+  height:500px;
+  background-color: #000000;
+  border: 1px solid #444;
+  border-radius: 10px; 
+  padding: 20px; 
+  margin: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  color: white; /* Text color */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.Events-card:hover{
+    background-color: #1a1a1a; /* Slightly lighter black on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+  transform: translateY(-5px); /* Move the card up */
+  cursor: pointer;
+}
+
+.Events-image-container{
+    width: 300px;
+    height: 250px;
+    object-fit: contain;
+}
+.Event-title p{
+font-family:'Times New Roman', Times, serif;
+  color: #082d37;
+  font-size: 25px;
+  margin-bottom:10px;
+  margin-top:0px;
+  background-color: aliceblue;
+  display: inline;
+}
+.know-more{
+    height: 45px;
+  width: 120px;
+  border-radius: 15px;
+  background-color:#082d37;
+  color: rgb(255, 255, 255);
+  border:none;
+  cursor: pointer;
+}
