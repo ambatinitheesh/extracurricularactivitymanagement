@@ -1,0 +1,313 @@
+/* Main container for the event details */
+.EventDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #e0e0e0;
+    background-color: #121212;
+    min-height: 100vh;
+}
+
+.back-button {
+    align-self: flex-start;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: #1968c2;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #1a73e8;
+}
+
+/* Card styling */
+.EventDetails-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    padding: 24px;
+    width: 85%;
+    max-width: 900px;
+    transition: transform 0.3s ease;
+}
+
+.EventDetails-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image styling */
+.EventDetails-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-right: 24px;
+}
+
+/* Content section styling */
+.EventDetails-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Title */
+.EventDetails-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    border-bottom: 2px solid #1968c2;
+    display: inline-block;
+    animation: slideInLeft 0.5s ease;
+}
+
+/* Slide-in animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Description styling */
+.EventDetails-description {
+    margin: 10px 0 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #b3b3b3;
+}
+
+/* Row styling for left-aligned attributes */
+.EventDetails-info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.EventDetails-info-row span {
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.EventDetails-info-row svg {
+    margin-right: 8px;
+    color: #1968c2;
+}
+
+/* Contact Info styling */
+.EventDetails-contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    color: #b3b3b3;
+}
+
+.EventDetails-contact-info p {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.EventDetails-contact-info svg {
+    color: #1968c2;
+    margin-right: 8px;
+}
+
+/* Register button */
+.register-button {
+    align-self: flex-end;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #1968c2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.edit-button{
+    align-self: flex-end;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #1968c2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.edit-button:hover{
+    background-color: #1a73e8;
+}
+.register-button:hover {
+    background-color: #1a73e8;
+}
+
+/* Registered message button */
+.registered-message {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00c853;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #333;
+    border: 2px solid #00c853;
+    text-align: center;
+    margin-top: 20px;
+    width: 130px;
+    margin-left:10px;
+    transition: transform 0.3s ease;
+}
+
+.registered-message:hover {
+    transform: scale(1.05);
+}
+
+/* Cancel registration button with moving red border */
+.cancel-button {
+    align-self: flex-end;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #e53935;
+    background-color: transparent;
+    border: 2px solid #e53935;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.cancel-button:hover {
+    color: #ffffff;
+    background-color: #e53935;
+}
+
+.cancel-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #e53935;
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.cancel-button:hover::before {
+    left: 0;
+}
+
+.cancel-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(90deg, transparent, rgba(229, 57, 53, 0.5), transparent);
+    animation: movingBorder 2s linear infinite;
+}
+
+@keyframes movingBorder {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker background for the overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Dark Theme Modal */
+.modal {
+    background: #2c2c2c; /* Darker background for the modal */
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* Slightly darker shadow for contrast */
+}
+
+/* Modal Header */
+.modal h3 {
+    margin-top: 0;
+    color: #fff; /* Lighter text for the header */
+}
+
+/* Modal Labels */
+.modal form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #ddd; /* Lighter label color for contrast */
+}
+
+/* Modal Form Inputs and Textarea */
+.modal form input,
+.modal form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #555; /* Darker border for inputs */
+    border-radius: 4px;
+    background-color: #3a3a3a; /* Dark background for input fields */
+    color: #fff; /* Light text color for inputs */
+}
+
+/* Modal Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Save Button */
+.save-button {
+    background-color: #1968c2; /* Accent color */
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover Effect for Save Button */
+.save-button:hover {
+    opacity: 0.9;
+}
+.Events-Similar{
+    display: flex;
+}

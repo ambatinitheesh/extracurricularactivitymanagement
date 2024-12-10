@@ -4,6 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+if (localStorage.getItem('email') === null) {
+  localStorage.setItem('email', '');
+}
+if (localStorage.getItem('password') === null) {
+  localStorage.setItem('password', '');
+}
+if (localStorage.getItem('role') === null) {
+  localStorage.setItem('role', '');
+}
+if (localStorage.getItem('name') === null) {
+  localStorage.setItem('name', '');
+}
+if (localStorage.getItem('profileimage') === null) {
+  localStorage.setItem('profileimage', '');
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

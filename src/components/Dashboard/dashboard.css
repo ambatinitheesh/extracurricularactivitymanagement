@@ -1,0 +1,546 @@
+/* Dashboard Wrapper */
+.dashboard-wrapper {
+    display: flex;
+    color: white;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid #333;
+    min-height: 100vh; /* Keeps sidebar height consistent */
+}
+
+/* Sidebar Buttons Styled as Cards */
+.sidebar-button {
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Card-like shadow */
+}
+
+.sidebar-button:hover {
+    background-color: #7B68EE;
+    transform: scale(1.02); /* Slightly enlarges button on hover */
+}
+
+/* Content Area */
+.content {
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #1C1C1C; /* Content-specific background color */
+    min-height: 100vh; /* Ensures content height matches sidebar */
+    overflow-y: auto; /* Adds scroll for extra content */
+}
+
+/* Content Card */
+.card {
+    background-color: #1C1C1C;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Adds card-like shadow */
+}
+
+/* Card Title Styling */
+.card h2 {
+    color: #FFFAFA;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Chart Container */
+.chart-container {
+    height: 300px;
+    width: 100%;
+}
+
+/* Student Table Styled as a Card */
+.student-table {
+    background-color: #1C1C1C;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.search-field {
+    margin-bottom: 10px;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    width: 300px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #FFF;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .pagination-controls button {
+    padding: 6px 10px;
+    margin: 0 4px;
+    cursor: pointer;
+    background-color: #4B0082; /* Dark indigo color */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .pagination-controls button:hover {
+    background-color: #3a0066; /* Darker indigo for hover effect */
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #2f2f2f; /* Black color for disabled button */
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .pagination-controls span {
+    color: #4B0082;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 8px;
+  }
+  
+  .pagination-controls select {
+    padding: 4px;
+    margin-left: 8px;
+    font-size: 14px;
+    background-color: #4B0082;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+  }
+  
+/* Table and Column Menu Styles */
+.table-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #1C1C1C;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.table-header {
+    background-color: #282828;
+    color: #FFF;
+    text-align: center;
+}
+
+.table-header .menu-icon {
+    color: #1968c2; /* Blue color for three dots */
+    cursor: pointer;
+}
+
+.table-cell {
+    color: #FFFFFF;
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.hide-column-btn {
+    color: #1968c2;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.show-all-btn {
+    color: #4CAF50;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Sorting Button Styles */
+.sort-button {
+    color: #7B68EE;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sort-button:hover {
+    color: #9E8CFB;
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #333;
+}
+
+.menu-item:hover {
+    background-color: #444;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #1C1C1C;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+}
+
+/* Modal Input Fields */
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #B0C4DE;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #4B0082;
+    border-radius: 5px;
+    background-color: #333;
+    color: #FFFFFF;
+}
+
+/* Modal Buttons */
+.modal-content button {
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #7B68EE;
+}
+.add-student-form {
+  background-color: #1C1C1C;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  max-width: 500px; /* Increased width for a rectangular look */
+  margin: auto;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.name-fields,
+.email-upload-fields,
+.password-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.name-field,
+.email-field,
+.upload-field,
+.password-field,
+.confirm-password-field {
+  width: 48%; /* Adjusted to have two fields side by side */
+}
+
+.show-password-container {
+  position: relative;
+}
+
+.show-password-container input {
+  width: 100%;
+}
+
+.eye-icon1 {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: #ccc;
+  filter: 1;
+}
+
+.addbutton, .cancelbutton {
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+  display: block;
+  margin: 10px auto;
+}
+
+.addbutton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.addbutton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.cancelbutton {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancelbutton:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+.error {
+  color: red;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+  
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+.confirmation-content {
+    background: #1C1C1C;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.confirmation-buttons {
+    margin-top: 20px;
+}
+
+.confirm-button1{
+  padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3CB371; /* Confirm color */
+    color: white;
+}
+
+.cancel-button1 {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF6347; /* Cancel color */
+    color: white;
+}
+
+.add-club-form {
+  background-color: #1C1C1C;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  max-width: 400px; /* Smaller width for a more compact look */
+  margin: auto;
+}/* Clubs Main Container */
+/* Main Clubs Container */
+.Clubs {
+  width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #000; /* Optional dark background */
+  color: #f3f4f6;
+}
+
+/* Header Styling */
+.Clubs-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Clubs-title p {
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #f3f4f6;
+}
+
+/* Clubs Body Grid */
+.Clubs-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card Styling */
+.Clubs-card {
+  background-color: #000000;
+  color: #e1e1e1;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  height:400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Start hidden */
+  transform: translateX(-50px); /* Start position for animation */
+  animation: slideIn 0.5s forwards;
+  animation-fill-mode: forwards; /* Keeps animation in final state */
+  margin-bottom: 20px;
+}
+
+/* Animation Delay */
+.Clubs-card:nth-child(1) { animation-delay: 0.1s; }
+.Clubs-card:nth-child(2) { animation-delay: 0.2s; }
+.Clubs-card:nth-child(3) { animation-delay: 0.3s; }
+/* Add more nth-child selectors if needed */
+
+/* Card Hover Effect */
+.Clubs-card:hover {
+  transform: translateY(-10px); /* Moves the card up by 20px */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Adds a larger shadow */
+  cursor: pointer;
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Club Image */
+.Clubs-image-container {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Club Name and Coordinator */
+.Club-name p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #07daff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.Club-coordinator p {
+  font-size: 16px;
+  color: #b0b0b0;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Description Section */
+.Clubs-description {
+  position: relative;
+  max-height: 100px;
+  overflow: hidden;
+  padding: 10px;
+  border-top: 1px solid #444;
+  transition: max-height 0.3s ease;
+}
+
+.Clubs-description:hover {
+  max-height: 150px; /* Expands to show more description */
+  overflow-y: auto;
+}
+
+/* View Club Button */
+.view-club-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #07a8ff;
+  color: #1e1e1e;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-club-button:hover {
+  background-color: #0d658e;
+}

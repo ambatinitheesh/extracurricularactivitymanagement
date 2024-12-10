@@ -8,30 +8,35 @@ import wap from '../images/whatsapp_icon.png'
 export const Footer = () => {
   return (
     <div className='footer'>
-     <div className='footer-logo'>
+      <div className='footer-logo'>
         <img src={footer_logo} alt=""/>
         <p>Student Sphere</p>
-       </div> 
-       <ul className='footer-links'>
-          <li>Company</li>
-          <li>About</li>
-          <li>Contact</li>
-       </ul>
-       <div className='footer-social-icon'>
-        <div className='footer-icons-container'>
-            <img src={insta} alt=""/>
+      </div> 
+      <div className='footer-blocks'>
+        <div className='footer-block-body'>
+          <p>Quick Links</p>
+          <a href="/">Home</a>
+          <a href="/events">Events</a>
+          <a href="/clubs">Clubs</a>
+          <a href="/login">Login</a>
         </div>
-        <div className='footer-icons-container'>
-            <img src={pin} alt=""/>
+        <div className='footer-block-body'>
+          <p>Follow Us</p>
+          <a href="/"><img style={{paddingRight:"5px"}} src={insta} alt="Instagram"/>Instagram</a> 
+           <a href="/"><img style={{paddingRight:"5px"}} src={pin} alt="Pinterest"/>Pinterest</a>
+          <a href="/"><img style={{paddingRight:"5px"}} src={wap} alt="Whatsapp"/>Whatsapp</a>
         </div>
-        <div className='footer-icons-container'>
-            <img src={wap} alt=""/>
+        <div className='footer-block-body-contact'>
+           <p style={{color:"white"}}> Contact Us</p>
+          <p>Student Sphere</p>
+          <p>123, ABC Street, XYZ City</p>
+          <p>studentsphereadmin@gmail.com</p>
+          <p>Phn:0863-2232344</p>
         </div>
-       </div>
-       <div className='footer-copyright'>
-        <hr/>
-        <p>Copyright @2024-All Rights Reserved</p>
-    </div>
+      </div>
+      <div className='footer-copyright'>
+        <p>© 2024 Student Sphere. All Rights Reserved</p>
+      </div>
     </div>
   )
 }

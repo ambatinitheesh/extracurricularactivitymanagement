@@ -1,0 +1,87 @@
+.user-table-container {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Table buttons (Edit, Delete) */
+  .edit-button1 {
+    width:100px;
+    height: 30px;
+    background-color: #4ba55a; /* Elegant purple for edit button */
+    color: #fff; /* White text */
+    cursor: pointer;
+    text-align: center;
+    margin-right:10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: none;
+  }
+  .delete-button1{
+    width: 100px;
+    height: 30px;
+    background-color: #e71818; /* Elegant purple for edit button */
+    color: #fff; /* White text */
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+  }
+  
+  .edit-button1:hover {
+    background-color: #329364; /* Blue color on hover */
+  }
+  
+.delete-button1:hover{
+    background-color:red; /* Blue color on hover */
+}
+  
+  /* Styling for the DataGrid component */
+  .MuiDataGrid-root {
+    background-color: #2a2a2a; /* Dark background for the table */
+    border-radius: 8px;
+    color: #fff; /* White text in table */
+  }
+  
+  .MuiDataGrid-columnHeaders {
+    background-color: #3c3c3c; /* Darker background for headers */
+    color: #fff; /* White header text */
+    font-weight: bold;
+    border-bottom: 2px solid #444; /* Dark border under header */
+  }
+  
+  .MuiDataGrid-columnHeaderTitleContainer {
+    color: #4B0082; /* Light purple header text */
+  }
+  
+  .MuiDataGrid-cell {
+    color: #ffffff; /* White cell text */
+    border-bottom: 1px solid #444; /* Dark border between rows */
+  }
+  
+  .MuiDataGrid-footerContainer {
+    background-color: #333; /* Dark footer background */
+    color: #fff; /* White footer text */
+  }
+  
+  /* Pagination styling */
+  .MuiPaginationItem-root {
+    color: #ffffff; /* White pagination text */
+  }
+  
+  .MuiPaginationItem-root.Mui-selected {
+    background-color: #6a4c93; /* Purple background for selected page */
+    color: #fff;
+  }
+  
+  .MuiPaginationItem-root:hover {
+    background-color: #1968c2; /* Hover effect for pagination items */
+  }
+  
+  /* Hover effect on table rows */
+  .MuiDataGrid-row:hover {
+    background-color: #555555; /* Slightly lighter row on hover */
+  }
+  
